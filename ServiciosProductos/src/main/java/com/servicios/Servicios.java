@@ -3,6 +3,7 @@ package com.servicios;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import com.entidad.Producto;
 
@@ -12,7 +13,10 @@ public class Servicios implements IServicios{
 		//Implementación lógica de negocio
 		//Comunicación con servicio REST Datasource
 		//Para obtener json con data del producto
-		return null;
+		RestTemplate restTemplate = new RestTemplate();
+		//URL del servicio
+        Producto producto = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", Producto.class);
+        return producto;
 	}
 	
 	public List<Producto> buscarProductosPorNombre(String nombre){
