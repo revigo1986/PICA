@@ -26,42 +26,45 @@ public class Servicios implements IServicios{
 		Transport transport = new Transport();
 		TransportCompany transportCompany = new TransportCompany();
 		
+		transportCompany.setId(1);
+		transportCompany.setCompanyName("Coomotor");
+		
 		city.setCode(1);
 		city.setId(1);
-		city.setName("city1");
+		city.setName("Bogota");
 		
 		sportEvent.setId(1);
-		sportEvent.setEventName("event1");
-		sportEvent.setEventDescription("event description");
-		sportEvent.setAddress("cra");
+		sportEvent.setEventName("Millonarios-Huila");
+		sportEvent.setEventDescription("Partido de futbol");
+		sportEvent.setAddress("Campin");
 		sportEvent.setDiscountPercentage(1);
-		sportEvent.setPrice(10);
-		sportEvent.setTicketsAvailable(1);
+		sportEvent.setPrice(300000);
+		sportEvent.setTicketsAvailable(2);
 		sportEvent.setVat(1);
 		sportEvent.setCity(city);
 		
 		hotel.setId(1);
-		hotel.setName("Hotel1");
-		hotel.setAddress("cll");
+		hotel.setName("Bogota Hotel");
+		hotel.setAddress("Galerias");
 		hotel.setRoomsAvailable(1);
 		hotel.setRoomsBooked(1);
 		hotel.setCity(city);
 		
 		transport.setId(1);
-		transport.setCompany(transportCompany);
-		transport.setDeparture("departure");
-		transport.setDescription("desc");
-		transport.setDestination("destination");
+		transport.setDeparture("Terminal");
+		transport.setDescription("Transporte en bus hasta Bogota");
+		transport.setDestination("Bogota");
 		transport.setDiscount(1);
-		transport.setOrigin("origin");
-		transport.setPrice(1);
-		transport.setReference("ref");
-		transport.setType("bus");
+		transport.setOrigin("Neiva");
+		transport.setPrice(50000);
+		transport.setReference("123456789");
+		transport.setType("Bus");
 		transport.setVat(1);
+		transport.setCompany(transportCompany);
 		
 		producto.setId(1);
-		producto.setProductName("Product1");
-		producto.setProductDescription("Product description");
+		producto.setProductName("Paquete1");
+		producto.setProductDescription("Paquete bus, hotel, futbol Bogota");
 		producto.setItemsAvailable(1);
 		producto.setItemsBooked(1);
 		producto.setHotel(hotel);
