@@ -7,21 +7,22 @@ import org.springframework.stereotype.Service;
 
 import com.entidad.City;
 import com.entidad.Hotel;
-import com.entidad.Producto;
+import com.entidad.Product;
 import com.entidad.SportEvent;
 import com.entidad.Transport;
 import com.entidad.TransportCompany;
 
 @Service
 public class Servicios implements IServicios{
-	public Producto buscarProductoPorCodigo(int codigoProducto) {
+	public Product buscarProductoPorCodigo(int codigoProducto) {
 		//Implementación lógica de negocio
 		//Comunicación con servicio REST Datasource
 		//Para obtener json con data del producto
 		
-		Producto producto = new Producto();
+		Product producto = new Product();
 		Hotel hotel = new Hotel();
-		City city = new City();
+		City city1 = new City();
+		City city2 = new City();
 		SportEvent sportEvent = new SportEvent();
 		Transport transport = new Transport();
 		TransportCompany transportCompany = new TransportCompany();
@@ -29,9 +30,13 @@ public class Servicios implements IServicios{
 		transportCompany.setId(1);
 		transportCompany.setCompanyName("Coomotor");
 		
-		city.setCode(1);
-		city.setId(1);
-		city.setName("Bogota");
+		city1.setCode("1");
+		city1.setId(1);
+		city1.setName("Neiva");
+		
+		city2.setCode("2");
+		city2.setId(1);
+		city2.setName("Bogota");
 		
 		sportEvent.setId(1);
 		sportEvent.setEventName("Millonarios-Huila");
@@ -41,21 +46,21 @@ public class Servicios implements IServicios{
 		sportEvent.setPrice(300000);
 		sportEvent.setTicketsAvailable(2);
 		sportEvent.setVat(1);
-		sportEvent.setCity(city);
+		sportEvent.setCity(city2);
 		
 		hotel.setId(1);
 		hotel.setName("Bogota Hotel");
 		hotel.setAddress("Galerias");
 		hotel.setRoomsAvailable(1);
 		hotel.setRoomsBooked(1);
-		hotel.setCity(city);
+		hotel.setCity(city2);
 		
 		transport.setId(1);
 		transport.setDeparture("Terminal");
 		transport.setDescription("Transporte en bus hasta Bogota");
-		transport.setDestination("Bogota");
+		transport.setDestination(city2);
 		transport.setDiscount(1);
-		transport.setOrigin("Neiva");
+		transport.setOrigin(city1);
 		transport.setPrice(50000);
 		transport.setReference("123456789");
 		transport.setType("Bus");
@@ -80,12 +85,12 @@ public class Servicios implements IServicios{
         return producto;
 	}
 	
-	public List<Producto> buscarProductosPorNombre(String nombre){
+	public List<Product> buscarProductosPorNombre(String nombre){
 		//Manejo de comodín, para enviar a servicio datasource
 		return null;
 	}
 	
-	public List<Producto> buscarProductosPorDescripcion(String descripcion){
+	public List<Product> buscarProductosPorDescripcion(String descripcion){
 		//Manejo de comodín, para enviar a servicio datasource		
 		return null;
 	}
