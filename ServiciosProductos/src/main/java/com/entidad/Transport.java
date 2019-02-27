@@ -4,8 +4,8 @@ public class Transport {
 	private int id;
 	private String reference;
 	private String description;
-	private String origin;
-	private String destination;
+	private City origin;
+	private City destination;
 	private String departure;
 	private double price;
 	private double vat;
@@ -36,20 +36,20 @@ public class Transport {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-	public String getOrigin() {
+	
+	public City getOrigin() {
 		return origin;
 	}
 
-	public void setOrigin(String origin) {
+	public void setOrigin(City origin) {
 		this.origin = origin;
 	}
 
-	public String getDestination() {
+	public City getDestination() {
 		return destination;
 	}
 
-	public void setDestination(String destination) {
+	public void setDestination(City destination) {
 		this.destination = destination;
 	}
 
