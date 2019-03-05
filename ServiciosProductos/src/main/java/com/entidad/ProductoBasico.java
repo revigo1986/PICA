@@ -1,39 +1,35 @@
 package com.entidad;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 //@JsonProperty for making match with the exact name in json response
 public class ProductoBasico {
-	private int id;
+	private String id;
 	private String productName;
 	private String productDescription;
-	private int sportEvent;
-	private int hotel;
-	private int transport;
-	private double price;
-	private double vat;
-	private int itemsAvailable;
-	private int itemsBooked;
-	private String type;
-	private Boolean isCampaign;
-	private Date startDate;
-	private Date expirationDate;
-	private BigDecimal campaignDiscount;
+	private String price;
+	private String vat;
+	private String itemsAvailable;
+	private String itemsBooked;
+	private String isCampain;
+	private String startDate;
+	private String expirationDate;
+	private String campaignDiscount;
 	private String imagePath1;
 	private String imagePath2;
 	private String imagePath3;
-	private BigDecimal totalValue;
-	private int productCode;
+	private String totalValue;
+	private String productCode;
+	private String hotelId;
+	private String sportEventId;
+	private String transportId;
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -53,99 +49,67 @@ public class ProductoBasico {
 		this.productDescription = productDescription;
 	}
 
-	public int getSportEvent() {
-		return sportEvent;
-	}
-
-	public void setSportEvent(int sportEvent) {
-		this.sportEvent = sportEvent;
-	}
-
-	public int getHotel() {
-		return hotel;
-	}
-
-	public void setHotel(int hotel) {
-		this.hotel = hotel;
-	}
-
-	public int getTransport() {
-		return transport;
-	}
-
-	public void setTransport(int transport) {
-		this.transport = transport;
-	}
-
-	public double getPrice() {
+	public String getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 
-	public double getVat() {
+	public String getVat() {
 		return vat;
 	}
 
-	public void setVat(double vat) {
+	public void setVat(String vat) {
 		this.vat = vat;
 	}
 
-	public int getItemsAvailable() {
+	public String getItemsAvailable() {
 		return itemsAvailable;
 	}
 
-	public void setItemsAvailable(int itemsAvailable) {
+	public void setItemsAvailable(String itemsAvailable) {
 		this.itemsAvailable = itemsAvailable;
 	}
 
-	public int getItemsBooked() {
+	public String getItemsBooked() {
 		return itemsBooked;
 	}
 
-	public void setItemsBooked(int itemsBooked) {
+	public void setItemsBooked(String itemsBooked) {
 		this.itemsBooked = itemsBooked;
 	}
 
-	public String getType() {
-		return type;
+	public String getIsCampain() {
+		return isCampain;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public void setIsCampain(String isCampain) {
+		this.isCampain = isCampain;
 	}
 
-	public Boolean getIsCampaign() {
-		return isCampaign;
-	}
-
-	public void setIsCampaign(Boolean isCampaign) {
-		this.isCampaign = isCampaign;
-	}
-
-	public Date getStartDate() {
+	public String getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(Date startDate) {
+	public void setStartDate(String startDate) {
 		this.startDate = startDate;
 	}
 
-	public Date getExpirationDate() {
+	public String getExpirationDate() {
 		return expirationDate;
 	}
 
-	public void setExpirationDate(Date expirationDate) {
+	public void setExpirationDate(String expirationDate) {
 		this.expirationDate = expirationDate;
 	}
 
-	public BigDecimal getCampaignDiscount() {
+	public String getCampaignDiscount() {
 		return campaignDiscount;
 	}
 
-	public void setCampaignDiscount(BigDecimal campaignDiscount) {
+	public void setCampaignDiscount(String campaignDiscount) {
 		this.campaignDiscount = campaignDiscount;
 	}
 
@@ -173,19 +137,43 @@ public class ProductoBasico {
 		this.imagePath3 = imagePath3;
 	}
 
-	public BigDecimal getTotalValue() {
+	public String getTotalValue() {
 		return totalValue;
 	}
 
-	public void setTotalValue(BigDecimal totalValue) {
+	public void setTotalValue(String totalValue) {
 		this.totalValue = totalValue;
 	}
 
-	public int getProductCode() {
+	public String getProductCode() {
 		return productCode;
 	}
 
-	public void setProductCode(int productCode) {
+	public void setProductCode(String productCode) {
 		this.productCode = productCode;
+	}
+
+	public String getHotelId() {
+		return hotelId;
+	}
+
+	public void setHotelId(String hotelId) {
+		this.hotelId = hotelId;
+	}
+
+	public String getSportEventId() {
+		return sportEventId;
+	}
+
+	public void setSportEventId(String sportEventId) {
+		this.sportEventId = sportEventId;
+	}
+
+	public String getTransportId() {
+		return transportId;
+	}
+
+	public void setTransportId(String transportId) {
+		this.transportId = transportId;
 	}
 }
