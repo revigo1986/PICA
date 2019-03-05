@@ -15,7 +15,7 @@ public class ProductoBasico {
 	private String isCampain;
 	private String startDate;
 	private String expirationDate;
-	private String campaignDiscount;
+	private String campainDiscount;
 	private String imagePath1;
 	private String imagePath2;
 	private String imagePath3;
@@ -105,12 +105,12 @@ public class ProductoBasico {
 		this.expirationDate = expirationDate;
 	}
 
-	public String getCampaignDiscount() {
-		return campaignDiscount;
+	public String getCampainDiscount() {
+		return campainDiscount;
 	}
 
-	public void setCampaignDiscount(String campaignDiscount) {
-		this.campaignDiscount = campaignDiscount;
+	public void setCampainDiscount(String campainDiscount) {
+		this.campainDiscount = campainDiscount;
 	}
 
 	public String getImagePath1() {
