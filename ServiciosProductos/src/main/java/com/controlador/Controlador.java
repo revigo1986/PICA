@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.entidad.Producto;
+import com.entidad.ProductoBasico;
 import com.servicios.IServicios;
 
 @RestController
@@ -18,22 +19,22 @@ public class Controlador {
 	@Autowired
 	private IServicios servicios;
 
-	@RequestMapping(path = "/BuscarProductos/codigo/{idProducto}", method = RequestMethod.GET, produces = {
+	@RequestMapping(path = "/BuscarProductoCompleto/{cadenaGenerica}", method = RequestMethod.GET, produces = {
 			MediaType.APPLICATION_JSON_VALUE })
-	public Producto buscarProductoPorCodigo(@PathVariable("idProducto") int idProducto) {
-		return servicios.buscarProductoPorCodigo(idProducto);
+	public List<Producto> buscarProductoCompleto(@PathVariable("cadenaGenerica") String cadenaGenerica) {
+		return servicios.buscarProductoCompleto(cadenaGenerica);
 	}
 
-	@RequestMapping(path = "/BuscarProductos/nombre/{nombreProducto}", method = RequestMethod.GET, produces = {
+	@RequestMapping(path = "/BuscarProductosBasico/{cadenaGenerica}", method = RequestMethod.GET, produces = {
 			MediaType.APPLICATION_JSON_VALUE })
-	public List<Producto> buscarProductoPorNombre(@PathVariable("nombreProducto") String nombreProducto) {
-		return servicios.buscarProductosPorNombre(nombreProducto);
+	public List<ProductoBasico> buscarProductosBasico(@PathVariable("cadenaGenerica") String cadenaGenerica) {
+		return servicios.buscarProductosBasico(cadenaGenerica);
 	}
-
-	@RequestMapping(path = "/BuscarProductos/descripcion/{descripcionProducto}", method = RequestMethod.GET, produces = {
-			MediaType.APPLICATION_JSON_VALUE })
-	public List<Producto> buscarProductoPorDescripcion(
-			@PathVariable("descripcionProducto") String descripcionProducto) {
-		return servicios.buscarProductosPorDescripcion(descripcionProducto);
-	}
+//
+//	@RequestMapping(path = "/BuscarProductos/descripcion/{descripcionProducto}", method = RequestMethod.GET, produces = {
+//			MediaType.APPLICATION_JSON_VALUE })
+//	public List<Producto> buscarProductoPorDescripcion(
+//			@PathVariable("descripcionProducto") String descripcionProducto) {
+//		return servicios.buscarProductosPorDescripcion(descripcionProducto);
+//	}
 }
